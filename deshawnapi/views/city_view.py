@@ -13,6 +13,7 @@ class CityView(ViewSet):
         city = City.objects.get(pk=pk)
 
         # Step 2: Serialize the city record as JSON
+        # To serialize a single city (1 row)
         serialized = CitySerializer(city, many=False)
 
         # Step 3: Send JSON response to client with 200 status code
@@ -23,6 +24,7 @@ class CityView(ViewSet):
         cities = City.objects.all()
 
         # Step 2: Convert the data to JSON format
+        # To serialize a list of cities (multiple rows)
         serialized = CitySerializer(cities, many=True)
 
         # Step 3: Respond to the client with the JSON data and 200 status code
