@@ -42,4 +42,4 @@ class AppointmentsView(ViewSet):
 class AppointmentsSerializer(serializers.ModelSerializer):
     class Meta:
         model = Appointments
-        fields = ("id", "walker", "data",)
+        fields = ("id", "walker", "date",)
