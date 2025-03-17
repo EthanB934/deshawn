@@ -15,4 +15,3 @@ router.register(r'appointments', AppointmentsView, 'appointment')
 urlpatterns = [
     path('', include(router.urls)),
 ]
-
